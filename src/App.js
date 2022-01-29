@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Radio from "./Components/Radio";
 
 function App() {
+  const channelLists = [
+    { id: 1, name: "Putin FM", frequency: "90.5" },
+    { id: 2, name: "Dribble FM", frequency: "101.2" },
+    { id: 3, name: "Doge FM", frequency: "99.4" },
+    { id: 4, name: "Ballads FM", frequency: "87.1" },
+    { id: 5, name: "Maximum FM", frequency: "142.4" },
+  ];
+
+  const [channels, setChannels] = useState(channelLists);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Radio channels={channels}></Radio>
     </div>
   );
 }
