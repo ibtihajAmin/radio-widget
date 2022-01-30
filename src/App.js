@@ -9,6 +9,8 @@ function App() {
     { id: 3, name: "Doge FM", frequency: "99.4" },
     { id: 4, name: "Ballads FM", frequency: "87.1" },
     { id: 5, name: "Maximum FM", frequency: "142.4" },
+    { id: 6, name: "Foorti FM", frequency: "122.4" },
+    { id: 5, name: "Etherium FM", frequency: "112.8" },
   ];
 
   const [channels, setChannels] = useState(channelLists);
