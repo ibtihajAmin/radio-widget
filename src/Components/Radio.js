@@ -11,13 +11,17 @@ const Radio = (props) => {
   };
 
   return (
-    <div className="d-flex ">
-      <Card style={{ width: "18rem" }}>
+    <div className="d-flex justify-content-center align-items-center mt-5 ">
+      <Card style={{ width: "18rem", height: "26rem", marginRight: "10px" }}>
         <Card.Body>
           <Card.Title>Stations</Card.Title>
           <ListGroup variant="flush">
             {props.channels.map((channel) => (
-              <ListGroup.Item key={channel.id} onClick={handleClick}>
+              <ListGroup.Item
+                key={channel.id}
+                onClick={handleClick}
+                style={{ cursor: "pointer" }}
+              >
                 {channel.name} {channel.frequency}
               </ListGroup.Item>
             ))}
@@ -25,9 +29,9 @@ const Radio = (props) => {
         </Card.Body>
       </Card>
 
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem", height: "26rem", marginLeft: "10px" }}>
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>Stations</Card.Title>
           <ListGroup variant="flush">
             <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
             <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
